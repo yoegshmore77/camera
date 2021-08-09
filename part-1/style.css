@@ -37,7 +37,7 @@ html, body{
 
     position: fixed;
     bottom: 0px;
-    left: calc(-20% - 100px);
+    right: calc(-20% - 100px);
     z-index: 10;
 }
 
