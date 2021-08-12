@@ -38,7 +38,7 @@ cameraTrigger.onclick = function() {
 
 // Flip the camera when cameraFlip is tapped
 cameraFlip.onclick = function() {
-    
+    track = null;
     if (camId == 0){
         constraints = { video: { facingMode: "environment" }, audio: false };
         camId = 1;   
