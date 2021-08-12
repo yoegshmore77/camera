@@ -16,9 +16,12 @@ function cameraStart() {
     track = null;
         if (camId == 0){
         constraints = { video: { facingMode: "environment" }, audio: false };
-        camId = 1;   
+            alert (camId);
+        camId = 1;
+            
     }else{
         constraints = { video: { facingMode: "user" }, audio: false };
+        alert (camId);
         camId = 0;
     }
     
