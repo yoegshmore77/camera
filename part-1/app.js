@@ -15,12 +15,12 @@ const cameraView = document.querySelector("#camera--view"),
 function cameraStart() {
     track = null;
         if (camId == 0){
-        constraints = { video: { facingMode: "environment" }, audio: false };
+        constraints = { video: { facingMode: "user" }, audio: false };
             alert (camId);
         camId = 1;
             
     }else{
-        constraints = { video: { facingMode: "user" }, audio: false };
+        constraints = { video: { facingMode: "environment" }, audio: false };
         alert (camId);
         camId = 0;
     }
