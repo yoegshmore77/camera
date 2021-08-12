@@ -10,6 +10,7 @@ const cameraView = document.querySelector("#camera--view"),
     cameraTrigger = document.querySelector("#camera--trigger");
     cameraFlip = document.querySelector("#camera--flip");
 
+
 // Access the device camera and stream to cameraView
 function cameraStart(camId) {
     console.log(camId);
