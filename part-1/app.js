@@ -40,7 +40,7 @@ cameraFlip.onclick = function() {
     if (camId == 0){
         camId = 1;   
     }else{
-        camId 0;
+        camId = 0;
     }
     cameraStart(camId);
     
