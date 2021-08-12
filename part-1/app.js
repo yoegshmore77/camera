@@ -1,7 +1,7 @@
 // Set constraints for the video stream
 var constraints = { video: { facingMode: "user"}, audio: false };
 var track = null;
-var camId = 0;
+int camId = 0;
 
 // Define constants
 const cameraView = document.querySelector("#camera--view"),
@@ -38,7 +38,7 @@ cameraTrigger.onclick = function() {
 
 // Flip the camera when cameraFlip is tapped
 cameraFlip.onclick = function() {
-    track = null;
+    //track = null;
     if (camId == 0){
         constraints = { video: { facingMode: "environment" }, audio: false };
         camId = 1;   
