@@ -31,6 +31,8 @@ function cameraStart() {
             track = stream.getTracks()[camId];
         console.log(stream.getTracks()[0]);
             cameraView.srcObject = stream;
+        
+        cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
         })
         .catch(function(error) {
             console.error("Oops. Something is broken.", error);
