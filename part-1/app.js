@@ -46,7 +46,7 @@ cameraFlip.onclick = function() {
         //constraints = { video: { facingMode: "user" }, audio: false };
         camId = 0;
     }
-    constraints = { video: { facingMode: "environment" }, audio: false };
+    constraints = { video: { facingMode: "user" }, audio: false };
     cameraStart(camId);
     
 };
