@@ -40,10 +40,10 @@ cameraTrigger.onclick = function() {
 cameraFlip.onclick = function() {
     //track = null;
     if (camId == 0){
-        constraints = { video: { facingMode: "environment" }, audio: false };
+        //constraints = { video: { facingMode: "environment" }, audio: false };
         camId = 1;   
     }else{
-        constraints = { video: { facingMode: "user" }, audio: false };
+        //constraints = { video: { facingMode: "user" }, audio: false };
         camId = 0;
     }
     constraints = { video: { facingMode: "environment" }, audio: false };
