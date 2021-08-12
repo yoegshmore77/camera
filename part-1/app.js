@@ -1,5 +1,5 @@
 // Set constraints for the video stream
-var constraints = { video: { facingMode: "environment"}, audio: false };
+var constraints = { video: { facingMode: "user"}, audio: false };
 var track = null;
 var camId = 0;
 
@@ -12,8 +12,15 @@ const cameraView = document.querySelector("#camera--view"),
 
 
 // Access the device camera and stream to cameraView
-function cameraStart(camId) {
-    console.log(camId);
+function cameraStart() {
+        if (camId == 0){
+        constraints = { video: { facingMode: "environment" }, audio: false };
+        camId = 1;   
+    }else{
+        constraints = { video: { facingMode: "user" }, audio: false };
+        camId = 0;
+    }
+    
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
@@ -39,17 +46,11 @@ cameraTrigger.onclick = function() {
 // Flip the camera when cameraFlip is tapped
 cameraFlip.onclick = function() {
     //track = null;
-    if (camId == 0){
-        //constraints = { video: { facingMode: "environment" }, audio: false };
-        camId = 1;   
-    }else{
-        //constraints = { video: { facingMode: "user" }, audio: false };
-        camId = 0;
-    }
-    constraints = { video: { facingMode: "user" }, audio: false };
-    cameraStart(camId);
+
+    //constraints = { video: { facingMode: "user" }, audio: false };
+    cameraStart();
     
 };
 
 // Start the video stream when the window loads
-window.addEventListener("load", cameraStart(camId), false);
+window.addEventListener("load", cameraStart(), false);
