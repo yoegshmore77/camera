@@ -18,7 +18,7 @@ function cameraStart(camId) {
         .getUserMedia(constraints)
         .then(function(stream) {
             track = stream.getTracks()[0];
-        console.log(stream.getTracks()[camId]);
+        console.log(stream.getTracks()[0]);
             cameraView.srcObject = stream;
         })
         .catch(function(error) {
